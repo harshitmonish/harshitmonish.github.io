@@ -1,6 +1,6 @@
 ---
 title: "Action Spotting in Soccer broadcast Untrimmed videos"
-excerpt: "The task of spotting consists of finding the anchor time that identifies an event in a video and then classify the event to appropriate class."<br/><img src='/images/action_spotting.PNG'>
+excerpt: "The task of spotting consists of finding the anchor time that identifies an event in a video and then classify the event to appropriate class. <br/><img src='/images/action_spotting.PNG'>"
 collection: portfolio
 ---
 

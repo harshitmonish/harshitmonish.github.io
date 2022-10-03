@@ -12,15 +12,35 @@ Hello, My name is Harshit Monish, I am a Graduate Student at University at Buffa
 
 My current research interest lie in Applied Machine Learning, ML for System efficiency(hw-sw co-design), Language modeling, Deep Learning for Sports Analytics, ML training optimization techniques, ML techniques in Hardware Modelling.
 
+Education
+========
+* Master's in Artificial Intelligence, University at Buffalo, SUNY (class of 2022)
+* Bachelor's in Computer Science, JIIT, Noida (Class of 2015)
+
+
 Competencies
 ======
 I started coding in 6th grade and absolutely love building software applications. As a Technology lead, I have a proven track record of defining novel product concepts and leading product development from concept to launch.
 
-Engineering:
+**Engineering:**
 * Software Development and Machine Learning Systems with extensive coding experience in desktop technologies like Python, C++, Java, Tensorflow, Pytorch.
 
-Leadership:
+**Leadership**:
 * Developer community leader, I lead with purpose and style that promotes excellence.
+
+Technical Skills
+================
+<pre>
+Programming Languages : Python, C++, C, Java, Verilog.
+Libraries/Framework   : Pandas, Numpy, SciPy, Sk-learn, Keras, Spacy, Pytorch, Tensorflow, Jupyter notebooks, Pycharm.
+Cloud Computing       : Google Cloud Platform: Docker, Kubernetes, Data Flow, BigQuery, VertexAI
+Version Control       : Git, Perforce, Clearcase.
+Data Visualization    : Seaborn, Matplotlib, Plotly.
+Database              : SQL, MongoDB, Cassandra.
+EDA Tools             : IXCOM, Xcelium, Virtual Bridge, Palladium
+Virtualization Tools  : QEMU
+</pre>
+
 
 Volunteer Experience
 ======

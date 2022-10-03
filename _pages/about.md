@@ -11,7 +11,7 @@ redirect_from:
 Hello, My name is Harshit Monish, I am a Graduate Student at University at Buffalo, SUNY majoring in Artificial Intelligence. A Data Science, Machine Learning, Natural Language Processing and Deep Learning enthusiast and a highly accomplished and results-driven technology leader, I am passionate about creating a positive impact through the development of new technology.
 
 My current research interest lie in Applied Machine Learning, ML for System efficiency(hw-sw co-design), Language modeling, Deep Learning for Sports Analytics, ML training optimization techniques, ML techniques in Hardware Modelling.
-\
+
 
 Education
 ========
@@ -36,7 +36,7 @@ Technical Skills
 <pre>
 Programming Languages : Python, C++, C, Java, Verilog.
 Libraries/Framework   : Pandas, Numpy, SciPy, Sk-learn, Keras, Spacy, Pytorch, Tensorflow, Jupyter notebooks, Pycharm.
-Cloud Computing       : Google Cloud Platform: Docker, Kubernetes, Data Flow, BigQuery, VertexAI
+Cloud Computing       : GCP: Docker, Kubernetes, DataFlow, BigQuery, VertexAI.
 Version Control       : Git, Perforce, Clearcase.
 Data Visualization    : Seaborn, Matplotlib, Plotly.
 Database              : SQL, MongoDB, Cassandra.

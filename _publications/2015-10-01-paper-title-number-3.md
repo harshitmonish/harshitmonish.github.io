@@ -1,15 +1,15 @@
 ---
-title: "Paper Title Number 3"
+title: "A Comparative assessment of Data Mining Algorithms to predict fraudulent firms"
 collection: publications
 permalink: /publication/2015-10-01-paper-title-number-3
-excerpt: 'This paper is about the number 3. The number 4 is left for future work.'
-date: 2015-10-01
-venue: 'Journal 1'
-paperurl: 'http://academicpages.github.io/files/paper3.pdf'
-citation: 'Your Name, You. (2015). &quot;Paper Title Number 3.&quot; <i>Journal 1</i>. 1(3).'
+excerpt: 'In this paper, we compare the classification models of Data mining that can predict the fraudulent firm based on current and past risk factors. Further, we apply the ensemble techniques to improve the models and finally compare the models based on accuracy and compute complexity. The dataset collected is multivariate having 18 attributes that have been considered as risk factors.'
+date: 12-15-2019
+venue: 'IEEE International Conference on Cloud Computing, Data Science & Engineering(Confluence)'
+paperurl: 'https://ieeexplore.ieee.org/document/9057968'
+citation: 'H. Monish and A. C. Pandey, "A Comparative Assessment of Data Mining Algorithms to Predict Fraudulent Firms," 2020 10th International Conference on Cloud Computing, Data Science & Engineering (Confluence), 2020, pp. 117-122, doi: 10.1109/Confluence47617.2020.9057968.'
 ---
-This paper is about the number 3. The number 4 is left for future work.
+In this paper, we compare the classification models of Data mining that can predict the fraudulent firm based on current and past risk factors. Further, we apply the ensemble techniques to improve the models and finally compare the models based on accuracy and compute complexity. The dataset collected is multivariate having 18 attributes that have been considered as risk factors.
 
-[Download paper here](http://academicpages.github.io/files/paper3.pdf)
+[Download paper here](https://ieeexplore.ieee.org/document/9057968)
 
-Recommended citation: Your Name, You. (2015). "Paper Title Number 3." <i>Journal 1</i>. 1(3).
+Recommended citation: H. Monish and A. C. Pandey, "A Comparative Assessment of Data Mining Algorithms to Predict Fraudulent Firms," 2020 10th International Conference on Cloud Computing, Data Science & Engineering (Confluence), 2020, pp. 117-122, doi: 10.1109/Confluence47617.2020.9057968.

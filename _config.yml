@@ -10,7 +10,7 @@ locale                   : "en-US"
 title                    : "Harshit Monish"
 title_separator          : "-"
 name                     : &name "Harshit Monish"
-description              : &description "🧑‍💻 I am a Graduate Student majoring in Artificial Intelligence. A Data Science, Machine Learning, Natural Language Processing and Deep Learning enthusiast and a highly accomplished and results-driven technology leader, I am passionate about creating a positive impact through the development of new technology. "
+description              : &description ""
 url                      : https://harshitmonish.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "academicpages/academicpages.github.io"
@@ -80,41 +80,16 @@ analytics:
 
 # Site Author
 author:
-  name             : "Your Sidebar Name"
+  name             : "Harshit Monish"
   avatar           : "profile.png"
-  bio              : "Your biography for the left-hand sidebar"
-  location         : "Location"
+  bio              : "GDSC-UB Lead || Machine Learning Intern at Intel || Ex-Lead Software Engineer at Cadence DEsign Systems"
+  location         : "New York"
   employer         :
-  pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
-  googlescholar    : "http://yourfullgooglescholarurl.com"
-  email            :
-  researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
-  uri              :
-  bitbucket        :
-  codepen          :
-  dribbble         :
-  flickr           :
-  facebook         :
-  foursquare       :
-  github           : "academicpages"
-  google_plus      :
-  keybase          :
-  instagram        :
-  impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
-  lastfm           :
-  linkedin         :
-  orcid            : "http://orcid.org/yourorcidurl"
-  pinterest        :
-  soundcloud       :
-  stackoverflow    : # http://stackoverflow.com/users/123456/username
-  steam            :
-  tumblr           :
-  twitter          : "replacethistwitterhandle"
-  vine             :
-  weibo            :
-  xing             :
-  youtube          :
-  wikipedia        :
+  googlescholar    : "https://gdsc.community.dev/u/mnry9x/#/about"
+  email            : "harshitmonish20@gmail.com"
+  github           : "https://github.com/harshitmonish"
+  linkedin         : "https://www.linkedin.com/in/harshit-monish-5b4536a8/"
+
 
 
 # Reading Files

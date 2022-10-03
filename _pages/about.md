@@ -14,8 +14,6 @@ My current research interest lie in Applied Machine Learning, ML for System effi
 
 Competencies
 ======
-**THINGS I LOVE TO DO**
-
 I started coding in 6th grade and absolutely love building software applications. As a Technology lead, I have a proven track record of defining novel product concepts and leading product development from concept to launch.
 
 Engineering:

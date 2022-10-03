@@ -24,7 +24,7 @@ location = ""
 permalink = ""
 title = ""
 
-print("here")
+
 for file in g:
     with open(file, 'r') as f:
         lines = f.read()

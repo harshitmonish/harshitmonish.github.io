@@ -11,12 +11,13 @@ redirect_from:
 Hello, My name is Harshit Monish, I am a Graduate Student at University at Buffalo, SUNY majoring in Artificial Intelligence. A Data Science, Machine Learning, Natural Language Processing and Deep Learning enthusiast and a highly accomplished and results-driven technology leader, I am passionate about creating a positive impact through the development of new technology.
 
 My current research interest lie in Applied Machine Learning, ML for System efficiency(hw-sw co-design), Language modeling, Deep Learning for Sports Analytics, ML training optimization techniques, ML techniques in Hardware Modelling.
+\
 
 Education
 ========
 * Master's in Artificial Intelligence, University at Buffalo, SUNY (class of 2022)
-* Bachelor's in Computer Science, JIIT, Noida (Class of 2015)
-
+* Bachelor's in Computer Science, JIIT, Noida (Class of 2015).
+&nbsp;
 
 Competencies
 ======
@@ -27,6 +28,8 @@ I started coding in 6th grade and absolutely love building software applications
 
 **Leadership**:
 * Developer community leader, I lead with purpose and style that promotes excellence.
+
+&nbsp;
 
 Technical Skills
 ================
@@ -41,12 +44,15 @@ EDA Tools             : IXCOM, Xcelium, Virtual Bridge, Palladium
 Virtualization Tools  : QEMU
 </pre>
 
+&nbsp;
 
 Volunteer Experience
 ======
  I strongly believe that **"Knowledge always increases with sharing it"**, hence I took the initiative to start the [Google Developer Student Club at University at Buffalo](https://gdsc.community.dev/university-at-buffalo/) and currently leading the developer community. The aim of the club is to help students bridge the gap between theory and practice and grow their knowledge in a peer-to-peer learning environment.
 
  From 0 to more than 200 student developers in the community, we are able to help them gain new skills through hands-on workshops, Information sessions, project building activities, etc. about a wide range of technical topics including- Cloud Computing, Machine Learning, Data Engineering, Android Development, etc. [GDSC-UB Info Sessions and Lab Workshops.](https://www.youtube.com/channel/UCE81NjVFck4axGmgZpwG--Q)
+
+&nbsp;
 
 My First True Love
 =====

@@ -82,8 +82,8 @@ analytics:
 author:
   name             : "Harshit Monish"
   avatar           : "profile.png"
-  bio              : "GDSC-UB Lead || Machine Learning Intern at Intel || Ex-Lead Software Engineer at Cadence DEsign Systems"
-  location         : "New York"
+  bio              : "GDSC-UB Lead || Machine Learning Intern at Intel || Ex-Lead Software Engineer at Cadence Design Systems"
+  location         : "Buffalo, New York, USA"
   employer         :
   googlescholar    : "https://gdsc.community.dev/u/mnry9x/#/about"
   email            : "harshitmonish20@gmail.com"
@@ -191,8 +191,8 @@ defaults:
     values:
       layout: single
       author_profile: true
-      share: true
-      comments: true
+      share: false
+      comments: false
   # _publications
   - scope:
       path: ""
@@ -218,7 +218,7 @@ defaults:
     values:
       layout: talk
       author_profile: true
-      share: true
+      share: false
 
 # Sass/SCSS
 sass:

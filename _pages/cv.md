@@ -66,8 +66,8 @@ Projects
   
 Achievements
 ======
-* [Google Developer Student Club Lead at University at Buffalo] (https://gdsc.community.dev/university-at-buffalo/)
-* Completed the [NVIDIA Deep Learning Institute Course-Fundamentals of Deep Learning] (https://courses.nvidia.com/certificates/95a8d9b0b57f41518af527f71ef6b301/). 
+* [Google Developer Student Club Lead at University at Buffalo](https://gdsc.community.dev/university-at-buffalo/)
+* Completed the [NVIDIA Deep Learning Institute Course-Fundamentals of Deep Learning](https://courses.nvidia.com/certificates/95a8d9b0b57f41518af527f71ef6b301/). 
 * Pitched the startup idea of smart AI trainer in UB Blackstone Launchpad startup-event and got in top 10 ideas out of 40. 
 * Won Cadence Global Hackathon 2019 held in Cadence San Jose, California Campus. 
 * Delivered an Advanced Technical Talk in Cadence on Machine Learning and Image processing. 

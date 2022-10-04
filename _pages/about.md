@@ -10,7 +10,7 @@ redirect_from:
 
 Hello, My name is Harshit Monish, I am a Graduate Student at University at Buffalo, SUNY majoring in Artificial Intelligence. A Data Science, Machine Learning, Natural Language Processing and Deep Learning enthusiast and a highly accomplished and results-driven technology leader, I am passionate about creating a positive impact through the development of new technology.
 
-My current research interest lie in Applied Machine Learning, ML for System efficiency(hw-sw co-design), Language modeling, Deep Learning for Sports Analytics, ML training optimization techniques, ML techniques in Hardware Modelling.
+My current research interest lie in Applied Machine Learning, Chatbots, ML for System efficiency(hw-sw co-design), Language modeling, Deep Learning for Sports Analytics, ML training optimization techniques, ML techniques in Hardware Modelling.
 
 
 Education

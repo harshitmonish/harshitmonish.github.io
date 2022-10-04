@@ -70,6 +70,4 @@ Achievements
 * Completed the [NVIDIA Deep Learning Institute Course-Fundamentals of Deep Learning](https://courses.nvidia.com/certificates/95a8d9b0b57f41518af527f71ef6b301/). 
 * Pitched the startup idea of smart AI trainer in UB Blackstone Launchpad startup-event and got in top 10 ideas out of 40. 
 * Won Cadence Global Hackathon 2019 held in Cadence San Jose, California Campus. 
-* Delivered an Advanced Technical Talk in Cadence on Machine Learning and Image processing. 
-* One of the three Co-founders of WE-Tinker Robotics club in Cadence, now a club of 80 members.
 * Sports Society Head and Basketball Team Captain of Jaypee Institute of Information Technology

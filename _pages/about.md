@@ -16,7 +16,7 @@ My current research interest lie in Applied Machine Learning, ML for System effi
 Education
 ========
 * Master's in Artificial Intelligence, University at Buffalo, SUNY (class of 2022)
-* Bachelor's in Computer Science, JIIT, Noida (Class of 2015).
+* Bachelor's in Computer Science, JIIT, Noida, India. (Class of 2015).
 &nbsp;
 
 Competencies

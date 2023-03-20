@@ -13,9 +13,13 @@ tags:
 What are graph compilers?
 ===
 With the increase in popularity of Artificial Intelligence applications many machine learning and deep learning frameworks have been developed to create ML/DL models e.g. Tensorflow, PyTorch, Keras, mxNet.With dataflow at the heart of most of these computations, efforts have been made to improve performance through graph compilation techniques.
-AI training is computationally intensive and High Performance Computing has been a key driver in AI growth. AI training deployments in HPC or cloud can be optimised with target-specific libraries, graph compilers, and by improving data movement or IO. Graph compilers aim to optimise the execution of a DNN graph by generating an optimised code for target hardware thus accelerating the training and deployment of DL models.
-The Deep learning models are usually represented as computational graphs, with nodes representing tensor operators, and edges the data dependencies between them. This computational graph is then used to further optimise for different hardware back-ends which include operator fusion, memory latency hiding, etc. With increase in hardware optimised for different ML use cases, e.g. GPU, TPU, AI accelerators, question arises how do we make a model built with an arbitrary framework run on arbitrary hardware?  
-<br/><img src='/images/Blog-1.PNG'>
+AI training is computationally intensive and High Performance Computing has been a key driver in AI growth. AI training deployments in HPC or cloud can be optimised with target-specific libraries, graph compilers, and by improving data movement or IO. 
+
+Graph compilers aim to optimise the execution of a DNN graph by generating an optimised code for target hardware thus accelerating the training and deployment of DL models.
+The Deep learning models are usually represented as computational graphs, with nodes representing tensor operators, and edges the data dependencies between them. This computational graph is then used to further optimise for different hardware back-ends which include operator fusion, memory latency hiding, etc.
+
+With the increase in ML/DL frameworks and also increase in hardware optimised for different ML use cases, e.g. GPU, TPU, AI accelerators, question arises how do we make a model built with an arbitrary framework run on arbitrary hardware?  
+<br/><img src='/images/graph_compiler_1.png'>
 
 * The first layer is called the application layer where we execute our AI application software.
 * The second layer is called the middleware and framework layer which comprise AI and ML frameworks e.g. Tensorflow, PyTorch, Keras, etc.

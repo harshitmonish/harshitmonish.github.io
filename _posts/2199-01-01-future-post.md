@@ -10,9 +10,10 @@ tags:
   - LLVM
   - MLIR
 ---
-What are graph compilers?
+Graph compilers Introduction
 ===
 <br/><img src='/images/graph_compiler_2.png'>
+
 With the increase in popularity of Artificial Intelligence applications many machine learning and deep learning frameworks have been developed to create ML/DL models e.g. Tensorflow, PyTorch, Keras, mxNet.With dataflow at the heart of most of these computations, efforts have been made to improve performance through graph compilation techniques.
 AI training is computationally intensive and High Performance Computing has been a key driver in AI growth. AI training deployments in HPC or cloud can be optimised with target-specific libraries, graph compilers, and by improving data movement or IO. 
 
@@ -22,15 +23,22 @@ The Deep learning models are usually represented as computational graphs, with n
 With the increase in ML/DL frameworks and also increase in hardware optimised for different ML use cases, e.g. GPU, TPU, AI accelerators, question arises how do we make a model built with an arbitrary framework run on arbitrary hardware?  
 <br/><img src='/images/graph_compiler_1.png'>
 
-* The first layer is called the application layer where we execute our AI application software.
-* The second layer is called the middleware and framework layer which comprise AI and ML frameworks e.g. Tensorflow, PyTorch, Keras, etc.
-* The third layer is called the programming model layer and is the lowest layer of the software that is closest to the hardware and interacts with the layer above to create optimized code for the specific architecture being targeted, e.g. x86, ARM, etc. This layer is majorly written by library developers having expertise in hardware/ software interaction. This is the layer where AI specific hardware features and interactions are leveraged to accelerate AI software.
-* The fourth layer is the hardware layer which comprise either CPU, GPU, AI accelerators for execution of AI software code.
+Providing support for a framework on a type of hardware is tedious, time-consuming and engineering intensive. A fundamental challenge is that different hardware types have different compute primitives and different memory layouts. Deploying ML models to new hardware such as mobile phone, FPGAs, embedded devices, GPUs, etc. requires mutual effort. some examples of graph compilers are:
+* [NVIDIA TensorRT](https://developer.nvidia.com/tensorrt) : This compiler is built on top of CUDA and optimises the inference by providing high throughput and low latency for deep learning inference applications. It supports ONNX, thus by extension supporting models trained by different frameworks, it provides optimisations based on reduced precision and hence provide faster performance compared to CPU-only platforms during inference.
+* [Intel nGraph](https://www.intel.com/content/www/us/en/artificial-intelligence/ngraph.html) : It is an end-to-end compiler for training and inference, it supports TensorFlow, MXNet, ONNX, etc. It can deliver increased normalized inference throughput leveraging MKL-DNN on Intel Xeon Scalable processor.
+* [GLOW](https://arxiv.org/abs/1805.00907): It optimises Neural Networks by lowering the graph to two intermediate representations. Glow works with PyTorch and supports multiple operators and targets. Glow can consume ONNX (open standard for serializing AI model) as an input and thus can support other frameworks.
+* [XLA](https://www.tensorflow.org/xla) : This compiler accelerates linear algebra computations in TensorFlow models and achieves a 1.15x speedup when enabled on standard benchmarks.
 
-Artificial Intelligence and Machine Learning rapid uptake over recent years can be attributed not only to new software platforms helping to orchestrate AI and recent advancements in AI models, but also to advancements in the core hardware enabling information processing across massive volumes of data. This has lead to more attraction and new possibilities to build and deploy AI applications in a streamlined fashion. 
-With the rise of GPU (general-purpose parallel processing) as well as AI-focused ASICs (application-specific processing), like TPUs (Tensor Processing Units), engineers today are able to analyze large amount of data in a cost-effective and scalable manner and answer high-impact operational questions.
+Intermediate Representation
+===
+For every new hardware type and device, instead of targeting a new compiler and libraries, we can create a generic representation which bridge frameworks and platforms. Framework developers will no longer have to support every type of hardware and only need to translate the framework code to Intermediate Representation and hardware engineers can support this IR after optimizations for respective hardware. IR lies at the core of how these compilers works, the orginal code of the model is converted into series of high and low level Intermediate Representations before generating hardware-native code to run your models on a certain platform.
 
-Based on the user requirement e.g. online/ realtime response for inference for language translation, online prediction vs offline batch inference prediction, the workload can be optimized to take advantage of the unique aspects of different architectures. The model parameters are increasing exponentially, some of the models today have more than 300 trillion parameters. In order to execute these models, hardware clusters are created and the execution jobs are distributed amongst these clusters. The splitting is one of the key areas where innovation continues to find the best way to distribute workloads across devices.
+High level IRs are generally hardware-agnostic(doesn't care what hardware they'll be running), while low-level IRs are framework-agnostic(doesn't care what framework the model was build with). To generate machine-native code from an IR, compilers typically leverage a code generator, the most popular codegen used by ML compilers is [LLVM](https://en.wikipedia.org/wiki/LLVM). XLA, NVIDIA CUDA Compiler (NVCC), TVM, MLIR all use LLVM.
+
+LLVM 
+===
+
+
 
 Model Optimization techniques
 ====

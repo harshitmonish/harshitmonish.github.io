@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="980" viewBox="0 0 1600 980" role="img" aria-labelledby="title desc">
+  <title id="title">Mixture-of-Experts routing and all-to-all communication</title>
+  <desc id="desc">A router dispatches tokens to experts on GPU 0, GPU 3, and GPU 7, with remote dispatches highlighted as all-to-all communication.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#07111f"/><stop offset="1" stop-color="#10233d"/></linearGradient>
+    <linearGradient id="router" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4c1d95"/><stop offset="1" stop-color="#312e81"/></linearGradient>
+    <linearGradient id="gpu" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#173a5e"/><stop offset="1" stop-color="#0d2745"/></linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#000814" flood-opacity="0.35"/></filter>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="6" refY="6" orient="auto"><path d="M0 0 L12 6 L0 12Z" fill="#5eead4"/></marker>
+    <marker id="arrowhot" markerWidth="12" markerHeight="12" refX="6" refY="6" orient="auto"><path d="M0 0 L12 6 L0 12Z" fill="#fb923c"/></marker>
+  </defs>
+  <rect width="1600" height="980" fill="url(#bg)"/>
+  <g font-family="Inter, Arial, sans-serif" text-anchor="middle"><text x="800" y="83" fill="#f8fafc" font-size="48" font-weight="700">MoE Routing Across GPUs</text><text x="800" y="127" fill="#a8c1d9" font-size="23">Sparse activation reduces active compute, but expert dispatch creates a communication problem.</text></g>
+  <g filter="url(#shadow)"><rect x="615" y="200" width="370" height="115" rx="24" fill="url(#router)" stroke="#c4b5fd" stroke-width="2"/><rect x="105" y="570" width="390" height="190" rx="24" fill="url(#gpu)" stroke="#5eead4" stroke-width="2"/><rect x="605" y="570" width="390" height="190" rx="24" fill="url(#gpu)" stroke="#fb923c" stroke-width="2"/><rect x="1105" y="570" width="390" height="190" rx="24" fill="url(#gpu)" stroke="#fb923c" stroke-width="2"/></g>
+  <g font-family="Inter, Arial, sans-serif" text-anchor="middle"><text x="800" y="250" fill="#f8fafc" font-size="35" font-weight="700">Router</text><text x="800" y="284" fill="#ddd6fe" font-size="21">select top-k experts per token</text><text x="300" y="627" fill="#f8fafc" font-size="29" font-weight="700">GPU 0</text><text x="800" y="627" fill="#f8fafc" font-size="29" font-weight="700">GPU 3</text><text x="1300" y="627" fill="#f8fafc" font-size="29" font-weight="700">GPU 7</text><text x="300" y="689" fill="#b9f5e8" font-size="27" font-weight="650">Local Expert</text><text x="800" y="689" fill="#fee2b5" font-size="27" font-weight="650">Remote Expert</text><text x="1300" y="689" fill="#fee2b5" font-size="27" font-weight="650">Remote Expert</text></g>
+  <g fill="none" stroke-width="6" marker-end="url(#arrow)"><path d="M700 335C575 410 395 465 310 545"/><path d="M800 335V545" stroke="#fb923c" marker-end="url(#arrowhot)"/><path d="M900 335C1025 410 1205 465 1290 545" stroke="#fb923c" marker-end="url(#arrowhot)"/></g>
+  <g font-family="Inter, Arial, sans-serif" text-anchor="middle"><rect x="531" y="400" width="538" height="73" rx="36" fill="#7c2d12" stroke="#fb923c" stroke-width="2"/><text x="800" y="447" fill="#ffedd5" font-size="28" font-weight="700">All-to-all communication</text></g>
+  <g stroke="#fb923c" stroke-width="3" stroke-dasharray="12 12" fill="none"><path d="M495 811H605"/><path d="M995 811H1105"/></g>
+  <g font-family="Inter, Arial, sans-serif" text-anchor="middle"><text x="800" y="850" fill="#fed7aa" font-size="22">Remote tokens are permuted, exchanged, executed, then returned to their original sequence order.</text><rect x="180" y="885" width="1240" height="54" rx="27" fill="#164e63" stroke="#67e8f9" stroke-width="2"/><text x="800" y="921" fill="#cffafe" font-size="23" font-weight="650">Serving performance depends on routing balance, grouped GEMM efficiency, and network topology—not just sparse FLOPs.</text></g>
+</svg>

@@ -62,7 +62,7 @@ Self-attention is commonly written as:
 
 $ \operatorname{Attention}(Q,K,V)=\operatorname{softmax}\left(\frac{QK^T}{\sqrt{d}}\right)V $
 
-where \(Q\), \(K\), and \(V\) are query, key, and value tensors and \(d\) is the head dimension. FFNs contain much of the parameter count and are generally implemented as matrix multiplications plus elementwise operations. The output of the final layer is projected into vocabulary logits, then a decoding policy (greedy, temperature sampling, top-p, and so on) chooses the next token.
+where $ \(Q\) $, $ \(K\) $ , and $ \(V\) $ are query, key, and value tensors and $ \(d\) $ is the head dimension. FFNs contain much of the parameter count and are generally implemented as matrix multiplications plus elementwise operations. The output of the final layer is projected into vocabulary logits, then a decoding policy (greedy, temperature sampling, top-p, and so on) chooses the next token.
 
 ### Prefill
 
@@ -112,7 +112,7 @@ For a simplified attention implementation:
 
 $ M_{KV}\approx 2\times L\times T\times H_{KV}\times D\times B $ 
 
-where \(L\) is layers, \(T\) cached tokens, \(H_{KV}\) KV heads, \(D\) head dimension, and \(B\) bytes per element. The factor of two represents keys and values. Real implementations also have alignment and block-management overhead.
+where $ \(L\) $ is layers, $ \(T\) $ cached tokens, $ \(H_{KV}\) $ KV heads, $ \(D\) $ head dimension, and $ \(B\) $ bytes per element. The factor of two represents keys and values. Real implementations also have alignment and block-management overhead.
 
 Long context turns cache management into a first-class systems problem. A service must decide which sequences may coexist, where their blocks reside, when prefixes can be reused, and whether parts of the cache can be quantized or offloaded.
 
@@ -384,9 +384,7 @@ prompt → reasoning tokens → intermediate checks → final answer
 
 **Inference bottleneck.** The cost no longer maps neatly to answer length. A useful abstraction is:
 
-\[
-C_{total}=C_{prefill}+C_{reasoning}+C_{output}
-\]
+$ C_{total}=C_{prefill}+C_{reasoning}+C_{output} $
 
 Reasoning tokens consume decode iterations, weight reads, cache capacity, and scheduler slots exactly as visible tokens do. They can also make latency more variable: one difficult request may occupy a sequence far longer than a short factual query.
 

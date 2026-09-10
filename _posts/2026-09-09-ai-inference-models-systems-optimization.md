@@ -60,9 +60,7 @@ x → normalization → attention ─┐
 
 Self-attention is commonly written as:
 
-\[
-\operatorname{Attention}(Q,K,V)=\operatorname{softmax}\left(\frac{QK^T}{\sqrt{d}}\right)V
-\]
+$ \operatorname{Attention}(Q,K,V)=\operatorname{softmax}\left(\frac{QK^T}{\sqrt{d}}\right)V $
 
 where \(Q\), \(K\), and \(V\) are query, key, and value tensors and \(d\) is the head dimension. FFNs contain much of the parameter count and are generally implemented as matrix multiplications plus elementwise operations. The output of the final layer is projected into vocabulary logits, then a decoding policy (greedy, temperature sampling, top-p, and so on) chooses the next token.
 
@@ -94,9 +92,7 @@ Decode is commonly measured by **time per output token (TPOT)** or **inter-token
 
 The first constraint is capacity. At FP16/BF16, a dense model requires roughly two bytes per parameter before runtime overhead:
 
-\[
-M_{weights}\approx 2P\ \text{bytes}
-\]
+$ M_{weights}\approx 2P\ \text{bytes} $
 
 Thus a 70B-parameter dense model needs about 140 GB just for weights. This does not include the KV cache, temporary activations, communication buffers, or runtime workspace. Whether the weights fit determines the minimum number of GPUs and the parallelism strategy.
 
@@ -104,9 +100,7 @@ Thus a 70B-parameter dense model needs about 140 GB just for weights. This does 
 
 During decode, a GPU may repeatedly stream large weight matrices from HBM for only a small amount of work per request. If the batch is too small to reuse those weights effectively, the GPU waits for memory. A useful first-order metric is arithmetic intensity:
 
-\[
-\text{Arithmetic intensity}=\frac{\text{operations}}{\text{bytes moved}}
-\]
+$ \text{Arithmetic intensity}=\frac{\text{operations}}{\text{bytes moved}} $
 
 Low arithmetic intensity tends to be memory-bound; high arithmetic intensity can be compute-bound. The roofline model formalizes this: attainable performance is limited by the lower of peak compute and memory-bandwidth times arithmetic intensity.
 
@@ -116,9 +110,7 @@ The KV cache stores prior keys and values so the model does not recompute them f
 
 For a simplified attention implementation:
 
-\[
-M_{KV}\approx 2\times L\times T\times H_{KV}\times D\times B
-\]
+$ M_{KV}\approx 2\times L\times T\times H_{KV}\times D\times B $ 
 
 where \(L\) is layers, \(T\) cached tokens, \(H_{KV}\) KV heads, \(D\) head dimension, and \(B\) bytes per element. The factor of two represents keys and values. Real implementations also have alignment and block-management overhead.
 
@@ -463,9 +455,7 @@ The [Kimi K3 model documentation](https://huggingface.co/moonshotai/Kimi-K3) des
 
 **Inference bottleneck.** A one-million-token context can turn the KV cache into the capacity limit even after sparse FFN compute is controlled. Agent workloads add a second multiplier: repeated model calls, tool outputs, retries, and context growth. The service must support both long-lived state and bursty tool-result prefills.
 
-\[
-\text{Agent cost}=N_{steps}\times \text{cost per model inference}
-\]
+$ \text{Agent cost}=N_{steps}\times \text{cost per model inference} $
 
 That equation is simplified—steps can differ radically in length—but it highlights the leverage. Halving a 20-step trajectory can be more valuable than a 10% improvement in individual token generation.
 
@@ -497,9 +487,7 @@ That equation is simplified—steps can differ radically in length—but it high
 
 **Optimization strategy.** Treat routing as an online decision problem. Evaluate not only model quality, but expected utility:
 
-\[
-\text{Expected utility}=\text{quality}-\lambda_1\text{latency}-\lambda_2\text{cost}
-\]
+$ \text{Expected utility}=\text{quality}-\lambda_1\text{latency}-\lambda_2\text{cost} $
 
 The weights encode product priorities. GPT-5.1 makes this direction more explicit: OpenAI describes adaptive reasoning for Instant, more precise thinking-time adaptation for Thinking, and Auto routing to the appropriate model path.
 

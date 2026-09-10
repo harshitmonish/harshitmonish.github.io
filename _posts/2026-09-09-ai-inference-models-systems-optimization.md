@@ -66,7 +66,7 @@ where $ \(Q\) $, $ \(K\) $ , and $ \(V\) $ are query, key, and value tensors and
 
 ### Prefill
 
-**Prefill** processes the input prompt and creates the initial KV cache. A 4,000-token prompt has substantial parallel work: many token positions can be evaluated together, subject to causal masking. Its primary user-visible metric is **time to first token (TTFT)**.
+Prefill processes the input prompt and creates the initial KV cache. A 4,000-token prompt has substantial parallel work: many token positions can be evaluated together, subject to causal masking. Its primary user-visible metric is **time to first token (TTFT)**.
 
 ```text
 prompt tokens ──parallel transformer execution──→ first output token + KV cache
@@ -76,7 +76,7 @@ Prefill often has high arithmetic intensity and can be compute-bound, especially
 
 ### Decode
 
-**Decode** generates output autoregressively. Each new token depends on the preceding sequence, so a single request exposes little token-level parallelism:
+Decode generates output autoregressively. Each new token depends on the preceding sequence, so a single request exposes little token-level parallelism:
 
 ```text
 token 1 → token 2 → token 3 → ... → token N

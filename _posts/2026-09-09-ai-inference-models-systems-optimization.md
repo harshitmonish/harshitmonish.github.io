@@ -7,7 +7,6 @@ tags:
 ---
 
 # AI Inference: Models, Systems, and Optimization
-===
 
 <img src='/images/ai-inference-2026/modern-adaptive-inference.svg'>
 

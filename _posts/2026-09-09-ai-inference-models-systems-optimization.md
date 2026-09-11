@@ -8,6 +8,7 @@ tags:
 
 # AI Inference: Models, Systems, and Optimization
 ===
+
 <img src='/images/ai-inference-2026/modern-adaptive-inference.svg'>
 
 Inference is the systems problem of turning a trained model into a useful service: one that is responsive, reliable, and affordable under real traffic. For large language models (LLMs), that means coordinating model architecture, GPU memory, kernels, batching, networking, and request scheduling—not merely executing a forward pass.

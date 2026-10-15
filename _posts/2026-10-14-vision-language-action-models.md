@@ -21,18 +21,42 @@ That’s the difference I want to unpack here. Vision-language models (VLMs) con
 A VLM is trained to connect visual input with language. It may answer questions about an image, produce a caption, locate a named object, or compare two scenes. A common design combines an image encoder with a language model. A projection or connector maps visual features into a form the language model can use alongside text tokens.
 
 <figure>
-<svg viewBox="0 0 900 260" role="img" aria-labelledby="vlm-title" xmlns="http://www.w3.org/2000/svg">
-  <title id="vlm-title">Vision-language model processing an image and question to produce a grounded text answer</title>
-  <defs><marker id="vlm-arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#52647a"/></marker></defs>
-  <rect x="22" y="53" width="150" height="66" rx="12" fill="#e8f1ff" stroke="#4776aa" stroke-width="2"/><text x="97" y="82" text-anchor="middle" font-family="sans-serif" font-size="17">Image</text><text x="97" y="104" text-anchor="middle" font-family="sans-serif" font-size="13">pixels / patches</text>
-  <rect x="22" y="151" width="150" height="66" rx="12" fill="#fff3df" stroke="#bd8740" stroke-width="2"/><text x="97" y="180" text-anchor="middle" font-family="sans-serif" font-size="17">Question</text><text x="97" y="202" text-anchor="middle" font-family="sans-serif" font-size="13">“What is on the table?”</text>
-  <rect x="235" y="53" width="170" height="66" rx="12" fill="#e8f1ff" stroke="#4776aa" stroke-width="2"/><text x="320" y="82" text-anchor="middle" font-family="sans-serif" font-size="17">Vision encoder</text><text x="320" y="104" text-anchor="middle" font-family="sans-serif" font-size="13">visual features</text>
-  <rect x="235" y="151" width="170" height="66" rx="12" fill="#fff3df" stroke="#bd8740" stroke-width="2"/><text x="320" y="180" text-anchor="middle" font-family="sans-serif" font-size="17">Text tokens</text><text x="320" y="202" text-anchor="middle" font-family="sans-serif" font-size="13">language features</text>
-  <rect x="485" y="91" width="170" height="86" rx="12" fill="#f1eaff" stroke="#8062a8" stroke-width="2"/><text x="570" y="126" text-anchor="middle" font-family="sans-serif" font-size="18">Fusion +</text><text x="570" y="151" text-anchor="middle" font-family="sans-serif" font-size="18">language model</text>
-  <rect x="735" y="91" width="145" height="86" rx="12" fill="#e6f5e9" stroke="#4b8b5b" stroke-width="2"/><text x="807" y="126" text-anchor="middle" font-family="sans-serif" font-size="17">Text answer</text><text x="807" y="151" text-anchor="middle" font-family="sans-serif" font-size="13">“A mug and kettle.”</text>
-  <path d="M172 86 H235" stroke="#52647a" stroke-width="2" marker-end="url(#vlm-arrow)"/><path d="M172 184 H235" stroke="#52647a" stroke-width="2" marker-end="url(#vlm-arrow)"/><path d="M405 86 C445 86 447 111 485 119" fill="none" stroke="#52647a" stroke-width="2" marker-end="url(#vlm-arrow)"/><path d="M405 184 C445 184 447 157 485 149" fill="none" stroke="#52647a" stroke-width="2" marker-end="url(#vlm-arrow)"/><path d="M655 134 H735" stroke="#52647a" stroke-width="2" marker-end="url(#vlm-arrow)"/>
+<svg viewBox="0 0 1000 340" role="img" aria-labelledby="vlm-title" xmlns="http://www.w3.org/2000/svg">
+  <title id="vlm-title">A vision-language model looks at a table scene, combines the image with a question, and answers that it sees a red mug beside a kettle</title>
+  <defs>
+    <linearGradient id="vlm-bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f7f9ff"/><stop offset="1" stop-color="#f1f6fa"/></linearGradient>
+    <marker id="vlm-arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#65758b"/></marker>
+  </defs>
+  <rect x="8" y="8" width="984" height="324" rx="22" fill="url(#vlm-bg)"/>
+  <text x="34" y="43" font-family="sans-serif" font-size="13" font-weight="700" letter-spacing="1.5" fill="#64748b">FROM PIXELS + WORDS TO AN ANSWER</text>
+  <rect x="28" y="66" width="240" height="238" rx="18" fill="#fff" stroke="#d8e1ec" stroke-width="2"/>
+  <text x="48" y="94" font-family="sans-serif" font-size="14" font-weight="700" fill="#334155">1  LOOK</text>
+  <rect x="48" y="108" width="200" height="126" rx="12" fill="#eaf3f7"/>
+  <circle cx="216" cy="132" r="15" fill="#f6d991"/>
+  <path d="M60 199 Q94 169 128 198 T196 193 L238 207 V225 H60Z" fill="#b9d5c8"/>
+  <rect x="62" y="207" width="172" height="10" rx="5" fill="#bd8c5b"/>
+  <path d="M111 165 H143 L140 199 Q127 209 114 199Z" fill="#d9574f"/><path d="M143 173 Q165 171 156 190 Q151 197 141 191" fill="none" stroke="#d9574f" stroke-width="5"/>
+  <path d="M177 167 Q191 158 205 167 L211 196 Q196 207 180 196Z" fill="#6e91a8"/><path d="M179 169 Q166 170 168 181 L179 182" fill="none" stroke="#6e91a8" stroke-width="5"/>
+  <text x="148" y="253" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#64748b">camera image</text>
+  <rect x="48" y="267" width="200" height="25" rx="12" fill="#fff4df"/><text x="148" y="284" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#8a5a18">“What is beside the kettle?”</text>
+  <path d="M270 185 H315" stroke="#65758b" stroke-width="3" marker-end="url(#vlm-arrow)"/>
+  <rect x="328" y="104" width="184" height="162" rx="20" fill="#eaf1ff" stroke="#bed0f4" stroke-width="2"/>
+  <circle cx="420" cy="151" r="24" fill="#fff"/><path d="M409 151h22M420 140v22" stroke="#6081bd" stroke-width="3" stroke-linecap="round"/>
+  <text x="420" y="198" text-anchor="middle" font-family="sans-serif" font-size="17" font-weight="700" fill="#304b7a">Vision encoder</text>
+  <text x="420" y="221" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#526783">finds objects + context</text>
+  <path d="M514 185 H560" stroke="#65758b" stroke-width="3" marker-end="url(#vlm-arrow)"/>
+  <rect x="574" y="104" width="184" height="162" rx="20" fill="#f1eaff" stroke="#d5c6ef" stroke-width="2"/>
+  <circle cx="666" cy="151" r="24" fill="#fff"/><path d="M654 145h24M654 152h18M654 159h12" stroke="#8062a8" stroke-width="3" stroke-linecap="round"/>
+  <text x="666" y="198" text-anchor="middle" font-family="sans-serif" font-size="17" font-weight="700" fill="#634b86">Language model</text>
+  <text x="666" y="221" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#6e5e87">connects image + question</text>
+  <path d="M760 185 H806" stroke="#65758b" stroke-width="3" marker-end="url(#vlm-arrow)"/>
+  <rect x="820" y="104" width="150" height="162" rx="20" fill="#e6f5ed" stroke="#b9ddca" stroke-width="2"/>
+  <circle cx="895" cy="151" r="24" fill="#fff"/><path d="M884 152l8 8 15-18" fill="none" stroke="#43865e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="895" y="198" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="700" fill="#35684b">Answer</text>
+  <text x="895" y="221" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#4f705c">“A red mug.”</text>
+  <text x="500" y="310" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#64748b">The model describes what it sees; it does not move the mug.</text>
 </svg>
-<figcaption align="center"><b>A typical VLM path: turn images and words into a shared representation, then generate a language response.</b></figcaption>
+<figcaption align="center"><b>A VLM grounds a question in the image and returns an answer. The output is information, not a robot command.</b></figcaption>
 </figure>
 
 There isn’t one standard VLM design. Some take one image; others split a high-resolution image into crops or look at several video frames. Many answer in text, while some can also return things like object coordinates or masks.
